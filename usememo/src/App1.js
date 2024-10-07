@@ -3,7 +3,7 @@ import './App.css';
 
 const hardCalculate=(number)=>{
 	console.log('어려운 계산');
-	for (let i=0; i<9999999; i++) {}
+	for (let i=0; i<999999999; i++) {}
 	return number + 10000;
 }
 const easyCalculate=(number)=>{
@@ -16,7 +16,8 @@ function App() {
 	const [easyNumber, setEasyNumber]=useState(1);
 	const hardSum = useMemo(()=>{
 		return hardCalculate(hardNumber)
-	},[hardNumber]);
+	},[hardNumber]); 
+	/* const hardSum = hardCalculate(hardNumber); */
 	const easySum = easyCalculate(easyNumber);
 
 
